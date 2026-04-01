@@ -1,0 +1,103 @@
+{
+  "name": "wide-search",
+  "displayName": "Wide Search",
+  "description": "IntelliJ-style Find in Files popup — editor tab with split preview and syntax highlighting",
+  "version": "0.9.1",
+  "publisher": "ddakker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddakker/vscode-wide-search-extension"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "wideSearch.open",
+        "title": "%command.open%"
+      },
+      {
+        "command": "wideSearch.openFileSearch",
+        "title": "%command.openFileSearch%"
+      },
+      {
+        "command": "wideSearch.openReplace",
+        "title": "%command.openReplace%"
+      },
+      {
+        "command": "wideSearch.openInFolder",
+        "title": "%command.openInFolder%"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "wideSearch.openInFolder",
+          "when": "explorerResourceIsFolder",
+          "group": "4_search"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "wideSearch.open",
+        "key": "ctrl+shift+f",
+        "mac": "cmd+shift+f"
+      },
+      {
+        "command": "-workbench.action.findInFiles",
+        "key": "ctrl+shift+f",
+        "mac": "cmd+shift+f"
+      },
+      {
+        "command": "wideSearch.openReplace",
+        "key": "ctrl+shift+r",
+        "mac": "cmd+shift+r"
+      },
+      {
+        "command": "-workbench.action.replaceInFiles",
+        "key": "ctrl+shift+r",
+        "mac": "cmd+shift+r"
+      },
+      {
+        "command": "-editor.action.startFindReplaceAction",
+        "key": "ctrl+shift+r",
+        "mac": "cmd+shift+r"
+      },
+      {
+        "command": "wideSearch.openReplace",
+        "key": "ctrl+shift+h",
+        "mac": "cmd+shift+h"
+      },
+      {
+        "command": "-workbench.action.replaceInFiles",
+        "key": "ctrl+shift+h",
+        "mac": "cmd+shift+h"
+      },
+      {
+        "command": "wideSearch.openFileSearch",
+        "key": "ctrl+alt+p",
+        "mac": "cmd+alt+p"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "node esbuild.mjs",
+    "build": "node esbuild.mjs",
+    "watch": "node esbuild.mjs --watch",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.20.0",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "shiki": "^1.0.0"
+  }
+}

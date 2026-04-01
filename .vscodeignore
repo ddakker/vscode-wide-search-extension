@@ -1,0 +1,9 @@
+**/*
+!dist/**
+!dist/webview/**
+!src/webview/index.html
+!src/webview/styles.css
+!package.json
+!README.md
+!LICENSE
+!wide-search.png

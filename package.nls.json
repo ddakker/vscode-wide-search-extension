@@ -1,0 +1,6 @@
+{
+  "command.open": "Wide Search: Find in Files",
+  "command.openFileSearch": "Wide Search: Find Files",
+  "command.openReplace": "Wide Search: Replace in Files",
+  "command.openInFolder": "Wide Search: Find in Folder"
+}
