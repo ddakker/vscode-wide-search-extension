@@ -1,7 +1,7 @@
 {
   "name": "wide-search",
   "displayName": "Wide Search",
-  "description": "IntelliJ-style Find in Files popup — editor tab with split preview and syntax highlighting",
+  "description": "Full-width Find in Files popup — editor tab with split preview and syntax highlighting",
   "version": "0.9.1",
   "publisher": "ddakker",
   "repository": {
