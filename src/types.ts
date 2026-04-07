@@ -39,7 +39,8 @@ export type ExtToWebMessage =
   | { type: 'config'; theme: 'dark' | 'light'; lang: string }
   | { type: 'saveResult'; success: boolean; message: string }
   | { type: 'setMode'; mode: 'search' | 'replace' }
-  | { type: 'setScope'; path: string };
+  | { type: 'setScope'; path: string }
+  | { type: 'focusInput' };
 
 // Webview -> Extension 메시지
 export type WebToExtMessage =

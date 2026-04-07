@@ -8,7 +8,15 @@ if ! command -v vsce &> /dev/null; then
   npm install -g @vscode/vsce
 fi
 
-vsce package --allow-missing-repository
+if [ "$1" = "--release" ]; then
+  echo "[릴리즈 빌드] console.log 제거됨"
+  node esbuild.mjs --release
+else
+  echo "[개발 빌드] console.log 유지됨"
+  node esbuild.mjs
+fi
+
+vsce package --allow-missing-repository --no-dependencies
 
 VSIX=$(ls -t *.vsix | head -1)
 echo ""

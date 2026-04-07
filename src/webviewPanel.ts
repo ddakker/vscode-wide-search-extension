@@ -57,6 +57,7 @@ export class SearchPanel {
           mode: mode === 'replace' ? 'replace' : 'search',
         });
       }
+      SearchPanel.instance.postMessage({ type: 'focusInput' });
       return;
     }
 

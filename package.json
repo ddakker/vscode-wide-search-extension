@@ -2,7 +2,7 @@
   "name": "wide-search",
   "displayName": "Wide Search",
   "description": "Full-width Find in Files popup — editor tab with split preview and syntax highlighting",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "publisher": "ddakker",
   "repository": {
     "type": "git",
@@ -11,6 +11,7 @@
   "engines": {
     "vscode": "^1.85.0"
   },
+  "icon": "wide-search-icon.png",
   "categories": ["Other"],
   "activationEvents": [],
   "main": "./dist/extension.js",

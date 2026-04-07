@@ -507,7 +507,7 @@ window.addEventListener('message', (event) => {
       }
       break;
 
-    case 'setMode':
+    case 'setMode': {
       if (msg.mode === 'replace' && !replaceVisible) {
         toggleReplace();
         replaceInput.focus();
@@ -517,7 +517,10 @@ window.addEventListener('message', (event) => {
       } else {
         (msg.mode === 'replace' ? replaceInput : searchInput).focus();
       }
+      const activeInput = getActiveSearchInput();
+      activeInput.select();
       break;
+    }
 
     case 'setScope':
       currentScopePath = msg.path;
@@ -535,11 +538,19 @@ window.addEventListener('message', (event) => {
       }
       break;
 
+    case 'focusInput': {
+      const input = getActiveSearchInput();
+      input.focus();
+      input.select();
+      break;
+    }
+
     case 'config':
       document.body.dataset.theme = msg.theme;
       if (msg.lang) {
         initI18n(msg.lang);
       }
+      getActiveSearchInput().focus();
       break;
   }
 });
@@ -847,7 +858,4 @@ btnClearScope.addEventListener('click', () => {
 // ---- Init ----
 vscode.postMessage({ type: 'ready' });
 
-setTimeout(() => {
-  searchInput.focus();
-  vscode.postMessage({ type: 'getHistory' });
-}, 50);
+vscode.postMessage({ type: 'getHistory' });

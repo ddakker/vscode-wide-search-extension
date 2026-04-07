@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9CA3AF"/>
+      <stop offset="100%" stop-color="#6B7280"/>
+    </linearGradient>
+    <linearGradient id="handle" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6B7280"/>
+      <stop offset="100%" stop-color="#4B5563"/>
+    </linearGradient>
+  </defs>
+  <!-- 돋보기 렌즈 -->
+  <circle cx="52" cy="52" r="30" fill="none" stroke="url(#lens)" stroke-width="6"/>
+  <!-- 돋보기 유리 하이라이트 -->
+  <path d="M36 38 A20 20 0 0 1 52 32" fill="none" stroke="#D1D5DB" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  <!-- 돋보기 손잡이 -->
+  <line x1="74" y1="74" x2="100" y2="100" stroke="url(#handle)" stroke-width="8" stroke-linecap="round"/>
+  <!-- 검색 라인 3줄 (wide search 상징) -->
+  <line x1="38" y1="45" x2="66" y2="45" stroke="#9CA3AF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="38" y1="53" x2="60" y2="53" stroke="#9CA3AF" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <line x1="38" y1="61" x2="54" y2="61" stroke="#9CA3AF" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+  <!-- D 뱃지 -->
+  <text x="2" y="26" font-family="'SF Pro Display', 'Segoe UI', sans-serif" font-size="28" font-weight="700" fill="#6B7280" letter-spacing="-1">D</text>
+</svg>

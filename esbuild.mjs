@@ -1,6 +1,9 @@
 import * as esbuild from 'esbuild';
 
 const isWatch = process.argv.includes('--watch');
+const isRelease = process.argv.includes('--release');
+
+const drop = isRelease ? ['console'] : [];
 
 const extensionConfig = {
   entryPoints: ['src/extension.ts'],
@@ -11,6 +14,7 @@ const extensionConfig = {
   platform: 'node',
   sourcemap: true,
   minify: !isWatch,
+  drop,
 };
 
 const webviewConfig = {
@@ -21,6 +25,7 @@ const webviewConfig = {
   platform: 'browser',
   sourcemap: true,
   minify: !isWatch,
+  drop,
 };
 
 if (isWatch) {

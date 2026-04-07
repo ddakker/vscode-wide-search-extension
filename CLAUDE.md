@@ -8,10 +8,11 @@ Editor tab-based search panel with flat result list + editable preview.
 ## Build & Package
 
 ```bash
-npm install          # install dependencies
-npm run build        # esbuild (extension + webview)
-npm run watch        # watch mode
-./package.sh         # build + vsce package + install instructions
+npm install              # install dependencies
+npm run build            # esbuild (extension + webview)
+npm run watch            # watch mode
+./package.sh             # 개발 빌드 패키징 (console.log 유지)
+./package.sh --release   # 릴리즈 빌드 패키징 (console.log 제거)
 ```
 
 Two esbuild entry points:
