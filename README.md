@@ -129,6 +129,12 @@ code --install-extension wide-search-0.1.0.vsix
 - VSCode 1.85.0+
 - ripgrep (bundled with VSCode)
 
+## Contact
+- Email: ddakker@gmail.com, ddakker@naver.com
+
+## MS Logging
+- Service Request SIR23555772
+
 ## License
 
 Apache License 2.0
